@@ -1,19 +1,14 @@
 sudo: false
 language: java
 script: mvn package
-
 branches:
   only:
-    - master
-    - /v\d+\.\d+[a-z]/
-
+  - master
+  - "/v\\d+\\.\\d+[a-z]/"
 deploy:
   provider: releases
   api_key:
-    secure: LnO4tOdUZXMTIkcnsOeskB9KDFt3Y+aesqhTlIE6P0Csn4mjJTi3jCgZDa09qyP9JHiXKovLpD6uoVf7BYublZ1nwayCrrRraTDuPZ7dTEL/D/lPezEpGz1gRsHN4B0QI1Cfgwm8f34xd2k77GNCm2Y9vlu8LpkildZJ6clp4gw=
-  file: /home/travis/build/bigspotteddog/test-lambda/target/hello-0.3.jar
-  skip_cleanup: true
+    secure: BBBkKjMilzexOUI7yqg1olIXciyiZ5/dqs075TAcMMtmD9M3pEulQpdTthYwrfQUTB5ffnZmS+pklv3m6KC2o/4p6KkG3jpcx/2Y01KFDg0hvfgG8amW6ngkC+AJ8Wr6KTHkibx8iZZESbLSkvPINAw5HyP+KoJ/T5LJ5xET6ViIDZpIGaeft3HbSZt7fbx0mI2lQVAGGFczPOQEIyezvIHfP7vyqkIHiUyWm4t4KJn0bR5wA6+YJeMfE98chalgSYfl8ahyHQNIgSxDaqGyS9dYB3pc0AABfGvb5XY6Ww5Q7uKvo4hrJlhIcyqDLhqR02zF1wRd99WhWuVVaZICXObZNhvDcixAtsb97AhnowfEVUqiuKUEIcbg6WPyGyT8J5tKW9mSs1Vt3gjTJmGDGGWLxB39fGfU9VdvvHGQICAiVJEAnKXQeNjM/QaYIiChIE7IKTdKTotldnySQlSE89TNjGxd2mwG2VlqABvhwqAG7W+2knOfbMyKhc/10WAazukJIZcJ3V218JzM9+j6wbSrzK15O+16QEiZkBsMidysjsZ7juEs/fVc8CgxdXCCKHOTpR5OMgDFRysc53TcAqLL+7QbXY5heuu5C7VkmnCRmORp3wAY4QVHE5p6r2rN6o8fQAyM8H2LAkQz2OW+iKDf5Lwg0ce26bkJZ5bQ8Uk=
+  file: "/home/travis/build/bigspotteddog/test-lambda/target/hello-0.3.jar"
   on:
-    tags: true
     repo: bigspotteddog/test-lambda
-    all_branches: true
