@@ -4,7 +4,7 @@
   <groupId>com</groupId>
   <artifactId>hello</artifactId>
   <packaging>jar</packaging>
-  <version>dev</version>
+  <version>0.2</version>
   <name>hello</name>
 
   <repositories>
